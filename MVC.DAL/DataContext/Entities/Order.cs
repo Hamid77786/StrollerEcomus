@@ -15,7 +15,7 @@ public class Order: TimeStample
     public string CustomerEmail { get; set; } = null!;
     public string CustomerPhone { get; set; }=null!;
     public string? OrderNote { get; set; }
-    public string? AppUserId { get; set; }
+    public int AppUserId { get; set; }
     public AppUser? AppUser { get; set; }
     public List<OrderItem> OrderItems { get; set; } = [];
 

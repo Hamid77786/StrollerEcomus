@@ -9,8 +9,10 @@ public class Product :TimeStample
     public int StockCount { get; set; }
     public bool IsActive { get; set; } = true;
     public ProductOption ProductOption { get; set; }
-    public int CategoryId { get; set; }
-    public Category? Category { get; set; }
+    public int ProductCategoryId { get; set; }
+    public ProductCategory? ProductCategory { get; set; }
+    public int ColorId { get; set; }
+    public Color? Color { get; set; }
     public List<ProductImage> ProductImages { get; set; } = [];
 
 
@@ -18,8 +20,13 @@ public class Product :TimeStample
 
 public enum ProductOption
 {
-    None,
-    Color,
-    Size
+    Shipped,
+    Pending,
+    Canceled,
+    Payed
+
 
 }
+    
+    
+
