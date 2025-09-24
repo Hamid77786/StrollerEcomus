@@ -14,18 +14,19 @@ public class AppDbContext : IdentityDbContext<AppUser>
 
     public DbSet<BrandLogo> BrandLogo { get; set; } = null!;
     public DbSet<Color> Colors { get; set; } = null!;
+    public DbSet<ProductColor> ProductColors { get; set; } = null!;
     public DbSet<Currency> Currencies { get; set; } = null!;
     public DbSet<FrequentlyQuestion> FrequentlyQuestions { get; set; } = null!;
     public DbSet<Icon> Icons { get; set; }= null!;
     public DbSet<IconCategory> IconCategories { get; set; } = null!;
     public DbSet<Language> Languages { get; set; }=null!;
     public DbSet<LogInContent> LogInContents { get; set; } = null!;
-    public DbSet<Logo> Logos { get; set; } = null!;
+    public DbSet<WebLogo> WebLogos { get; set; } = null!;
     public DbSet<Order> Orders { get; set; } = null!;
     public DbSet<OrderItem> OrdersItem { get; set;} = null!;
     public DbSet<PaymentImage> PaymentImages { get; set; } = null!;
     public DbSet<Product> Products { get; set; } = null!;
-    public DbSet<ProductCategory> ProductCategories { get; set; }=null!;
+    public DbSet<Category> ProductCategories { get; set; }=null!;
     public DbSet<ProductImage> ProductImages { get; set; } = null!;
     public DbSet<PromoCode> PromoCodes { get; set; } = null!;
     public DbSet<PromoUsage> PromoUsages { get; set; } = null!;
@@ -34,7 +35,7 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<SiteBanner> SiteBanners { get; set; } = null!;
     public DbSet<Slider> Sliders { get; set; } = null!;
     public DbSet<Social> Socials { get; set; } = null!;
-    public DbSet<WebSiteInfo> WebSiteInfos { get; set; } = null!;
+    public DbSet<WebInfo> WebInfos { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -42,8 +43,32 @@ public class AppDbContext : IdentityDbContext<AppUser>
            .Property(p => p.Price)
            .HasPrecision(18, 2);
 
+        builder.Entity<OrderItem>()
+           .Property(p => p.UnitPrice)
+           .HasPrecision(18, 2);
+
+        builder.Entity<OrderItem>()
+           .Property(p => p.TotalPrice)
+           .HasPrecision(18, 2);
+
+        builder.Entity<Order>()
+           .Property(p => p.DisCount)
+           .HasPrecision(18, 2);
+
+        builder.Entity<Order>()
+           .Property(p => p.Total)
+           .HasPrecision(18, 2);
+
+        builder.Entity<Order>()
+           .Property(p => p.SubTotal)
+           .HasPrecision(18, 2);
+
+       
+
         base.OnModelCreating(builder);
     }
+    
+    
 
     public override int SaveChanges()
     {

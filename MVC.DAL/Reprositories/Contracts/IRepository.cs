@@ -17,7 +17,7 @@ namespace StrollerEcomus.DAL.Reprositories.Contracts
             Func<IQueryable<T>,IIncludableQueryable<T,object>>? include=null,
             bool AsNoTracking = false);
 
-        Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> predicate,
+        Task<IList<T>> GetAllAsync(Expression<Func<T, bool>>? predicate=null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
             bool AsNoTracking = false);

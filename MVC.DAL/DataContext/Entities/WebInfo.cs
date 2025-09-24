@@ -2,7 +2,7 @@
 
 namespace StrollerEcomus.DAL.DataContext.Entities;
 
-public class WebSiteInfo:Entity
+public class WebInfo:Entity
 {
     public string? Address { get; set; }
     public string? Email { get; set; }

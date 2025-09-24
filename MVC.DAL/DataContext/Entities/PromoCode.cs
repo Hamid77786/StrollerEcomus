@@ -11,7 +11,7 @@ public class PromoCode:Entity
     public int Uses { get; set; } = 0;
     public bool Active { get; set; } = true;
     public bool OneTimePerUser { get; set; } = false;
-    public List<PromoUsage>? PromoUsages { get; set; }
+    public ICollection<PromoUsage>? PromoUsages { get; set; }
 
 
 }

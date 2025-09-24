@@ -10,10 +10,10 @@ public class Product :TimeStample
     public bool IsActive { get; set; } = true;
     public ProductOption ProductOption { get; set; }
     public int ProductCategoryId { get; set; }
-    public ProductCategory? ProductCategory { get; set; }
-    public int ColorId { get; set; }
-    public Color? Color { get; set; }
-    public List<ProductImage> ProductImages { get; set; } = [];
+    public Category? Category { get; set; }
+    public ICollection<ProductColor> ProductColors { get; set; } = [];
+    
+    public ICollection<ProductImage> ProductImages { get; set; } = [];
 
 
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrollerEcomus.DAL", "MVC.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrollerEcomus.MVC", "StrollerEcomus.MVC\StrollerEcomus.MVC.csproj", "{D71DD4B0-F624-4200-8B15-88490734B80B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrollerEcomus.BLL", "StrollerEcomus.BLL\StrollerEcomus.BLL.csproj", "{F2D19196-7D0A-41FD-8727-5B459C0FA68E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D71DD4B0-F624-4200-8B15-88490734B80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D71DD4B0-F624-4200-8B15-88490734B80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D71DD4B0-F624-4200-8B15-88490734B80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D19196-7D0A-41FD-8727-5B459C0FA68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D19196-7D0A-41FD-8727-5B459C0FA68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D19196-7D0A-41FD-8727-5B459C0FA68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D19196-7D0A-41FD-8727-5B459C0FA68E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
