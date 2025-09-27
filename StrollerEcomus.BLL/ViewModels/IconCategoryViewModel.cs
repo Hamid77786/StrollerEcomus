@@ -23,4 +23,3 @@ public class UpdateIconCategoryViewModel
     public IEnumerable<SelectListItem>? Icons { get; set; }
 
 }
-

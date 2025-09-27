@@ -4,9 +4,9 @@ public class Order: TimeStample
 {
     
     public OrderStatus OrderStatus { get; set; } = OrderStatus.New;
-    public decimal SubTotal { get; set; }// total without discount
-    public decimal DisCount { get; set; }// discount amount
-    public decimal Total { get; set; } // total with discount
+    public decimal SubTotal { get; set; }// без скидки
+    public decimal DisCount { get; set; }// сумма сос скидкой
+    public decimal Total { get; set; } // итог со скидкой
     public string? CustomerFirstName { get; set; } = null!;
     public string? CustomerLastName { get; set; } = null!;
     public string? CustomerCountry { get; set; } = null!;

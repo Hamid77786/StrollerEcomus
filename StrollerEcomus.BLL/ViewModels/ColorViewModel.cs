@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.AspNetCore.Http;
 using StrollerEcomus.DAL.DataContext.Entities;
 using System.Web.Mvc;
 
@@ -18,10 +19,11 @@ public class ColorViewModel
 
 public class CreateColorViewModel
 {
-    public int Id { get; set; }
+    
     public string? ColorName { get; set; }
-    public string? ColorImageUrl { get; set; }
     public string? ColorCode { get; set; }
+    public IFormFile? ColorImageFile { get; set; }
+    
     public IEnumerable<int> ProductId { get; set; } = [];
     public IEnumerable<SelectListItem>? Products { get; set; }
 }
@@ -30,9 +32,12 @@ public class UpdateColorViewModel
 {
     public int Id { get; set; }
     public string? ColorName { get; set; }
-    public string? ColorImageUrl { get; set; }
     public string? ColorCode { get; set; }
+    public string? ExistingColorImageUrl { get; set; }
+    public IFormFile? NewColorImageFile { get; set; }
     public IEnumerable<int> ProductId { get; set; } = [];
     public IEnumerable<SelectListItem>? Products { get; set; }
 
 }
+
+

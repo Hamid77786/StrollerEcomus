@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MVC.DAL\StrollerEcomus.DAL.csproj" />
+    <ProjectReference Include="..\StrollerEcomus.BLL\StrollerEcomus.BLL.csproj" />
   </ItemGroup>
 
 </Project>

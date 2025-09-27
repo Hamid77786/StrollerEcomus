@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StrollerEcomus.DAL.DataContext.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,4 +26,5 @@ namespace StrollerEcomus.BLL.ViewModels
         public string? BrandName { get; set; }
         public string? BrandImageUrl { get; set; }
     }
+    
 }

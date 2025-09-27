@@ -1,4 +1,5 @@
-﻿using StrollerEcomus.DAL.DataContext.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using StrollerEcomus.DAL.DataContext.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace StrollerEcomus.BLL.ViewModels
     {
         public int Id { get; set; }
         public string? CategoryName { get; set; }
+        public string? CategoryImageUrl { get; set; }
         public ICollection<Product> Products { get; set; } = [];
 
 
@@ -19,15 +21,22 @@ namespace StrollerEcomus.BLL.ViewModels
     public class CreateCategoryViewModel
     {
         public string CategoryName { get; set; } = null!;
+        public IFormFile? CategoryImageFile { get; set; }
     }
 
     public class UpdateCategoryViewModel
     {
         public int Id { get; set; }
         public string CategoryName { get; set; } = null!;
-        public IEnumerable<Product> Products { get; set; } = [];
+        public string? ExistingCategoryImageUrl { get; set; }
+        public IFormFile? NewCategoryImageFile { get; set; }
+
+        
 
     }
+    
+
+
 }
 
 

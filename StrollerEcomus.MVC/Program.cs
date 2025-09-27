@@ -1,5 +1,6 @@
 using StrollerEcomus.DAL.DataContext;
 using StrollerEcomus.DAL;
+using StrollerEcomus.BLL;
 
 
 namespace StrollerEcomus.MVC
@@ -15,6 +16,8 @@ namespace StrollerEcomus.MVC
 
             // Ensure the extension method AddDataAccessLayerServices is implemented and accessible
             builder.Services.AddDataAccessLayerServices(builder.Configuration);
+            builder.Services.AddBussinessLogicLayerServices();
+
 
             var app = builder.Build();
 
