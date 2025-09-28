@@ -9,7 +9,7 @@ public class Product :TimeStample
     public int StockCount { get; set; }
     public bool IsActive { get; set; } = true;
     public ProductOption ProductOption { get; set; }
-    public int ProductCategoryId { get; set; }
+    public int CategoryId { get; set; }
     public Category? Category { get; set; }
     public ICollection<ProductColor> ProductColors { get; set; } = [];
     

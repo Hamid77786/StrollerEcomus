@@ -1,5 +1,6 @@
 ﻿
 
+using StrollerEcomus.DAL.DataContext.Entities;
 using System.Web.Mvc;
 
 namespace StrollerEcomus.BLL.ViewModels;
@@ -34,6 +35,8 @@ public class UpdatePromoUsageViewModel
     public DateTime UsedAt { get; set; }
 
 }
+
+
 
 
 

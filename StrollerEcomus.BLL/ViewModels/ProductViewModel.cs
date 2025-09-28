@@ -33,7 +33,7 @@ public class CreateProductViewModel
     public int StockCount { get; set; }
     public bool IsActive { get; set; } = true;
     public ProductOption ProductOption { get; set; }
-    public int ProductCategoryId { get; set; }
+    public int CategoryId { get; set; }
     public IEnumerable<SelectListItem>? Categories { get; set; }
     public IEnumerable<int> SelectedColorIds { get; set; } = [];
     public IEnumerable<SelectListItem>? Colors { get; set; }
@@ -52,28 +52,31 @@ public class UpdateProductViewModel
         public int StockCount { get; set; }
         public bool IsActive { get; set; }
         public ProductOption ProductOption { get; set; }
-        public int ProductCategoryId { get; set; }
+        public int CategoryId { get; set; }
         public IEnumerable<SelectListItem>? Categories { get; set; }
         public IEnumerable<int> SelectedColorIds { get; set; } = new List<int>();
         public IEnumerable<SelectListItem>? Colors { get; set; }
         public List<IFormFile>? NewImages { get; set; }
         public List<string>? ExistingImages { get; set; } 
     
-
-    
-
-    
-
-   
-
-    
-
 }
 
 
-        
-        
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

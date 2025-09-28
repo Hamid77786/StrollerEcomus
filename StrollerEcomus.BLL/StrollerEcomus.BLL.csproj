@@ -15,4 +15,8 @@
     <ProjectReference Include="..\MVC.DAL\StrollerEcomus.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Constants\" />
+  </ItemGroup>
+
 </Project>

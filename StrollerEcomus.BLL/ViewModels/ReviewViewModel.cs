@@ -1,5 +1,7 @@
 ﻿
 
+using StrollerEcomus.DAL.DataContext.Entities;
+
 namespace StrollerEcomus.BLL.ViewModels;
 
 public class ReviewViewModel
@@ -22,3 +24,4 @@ public class UpdateReviewViewModel
     public string? ReviewContent { get; set; }
     public string? ReviewImageUrl { get; set; }
 }
+

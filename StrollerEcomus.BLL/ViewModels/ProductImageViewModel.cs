@@ -33,7 +33,9 @@ public class UpdateProductImageViewModel
     public IEnumerable<SelectListItem>? Products { get; set; }
 
 }
-   
+
+
+
 
 
 

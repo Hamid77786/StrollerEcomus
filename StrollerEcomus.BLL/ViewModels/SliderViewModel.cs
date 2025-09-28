@@ -1,6 +1,7 @@
 ﻿
 
 using Microsoft.AspNetCore.Http;
+using StrollerEcomus.DAL.DataContext.Entities;
 
 namespace StrollerEcomus.BLL.ViewModels;
 
@@ -30,9 +31,10 @@ public class UpdateSliderViewModel
     public string? SliderContent { get; set; }
 
 }
-    
-    
 
 
-        
-    
+
+
+
+
+

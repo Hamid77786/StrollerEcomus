@@ -1,6 +1,8 @@
 ﻿
 
 
+using StrollerEcomus.DAL.DataContext.Entities;
+
 namespace StrollerEcomus.BLL.ViewModels;
 public class PromoCodeViewModel
 {
@@ -36,7 +38,6 @@ public class UpdatePromoCodeViewModel
     public bool Active { get; set; }
     public bool OneTimePerUser { get; set; }
 }
-
 
 
 
