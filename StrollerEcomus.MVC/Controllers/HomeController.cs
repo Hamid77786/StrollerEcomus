@@ -1,32 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
+using StrollerEcomus.BLL.Services.Contracts;
 using StrollerEcomus.MVC.Models;
 using System.Diagnostics;
 
-namespace StrollerEcomus.MVC.Controllers
+namespace StrollerEcomus.MVC.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    private readonly IHomeService _homeService;
+
+    public HomeController(IHomeService homeService)
     {
-        private readonly ILogger<HomeController> _logger;
+        _homeService = homeService;
+    }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+    public async Task<IActionResult> Index()
+    {
+        var model = await _homeService.GetHomeViewModel();
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        return View(model);
     }
 }

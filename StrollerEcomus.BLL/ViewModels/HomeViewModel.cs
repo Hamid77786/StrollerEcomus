@@ -6,6 +6,8 @@ namespace StrollerEcomus.BLL.ViewModels
     {
         public ICollection<SliderViewModel> Sliders { get; set; } = [];
         public ICollection<IconViewModel> Icons { get; set; } = [];
+        public ICollection<IconCategoryViewModel> IconsCategories { get; set; } = [];
+        public ICollection<ColorViewModel> Colors { get; set; } = [];
         public ICollection<CategoryViewModel> Categories { get; set; } = [];
         public ICollection<SiteBannerViewModel> SiteBanners { get; set; } = [];
         public ICollection<BrandLogoViewModel> BrandLogos { get; set; } = [];
