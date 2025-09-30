@@ -11,5 +11,6 @@ public class AppUser:IdentityUser
     public string? Address { get; set; }
    
     public string? ProfileImageUrl { get; set; }
+    public ICollection<WishList> WishLists { get; set; } = [];
 
 }

@@ -3,6 +3,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StrollerEcomus.BLL.Services.Contracts;
 using StrollerEcomus.DAL.DataContext;
 using StrollerEcomus.DAL.Reprositories;
 using StrollerEcomus.DAL.Reprositories.Contracts;
@@ -45,7 +46,8 @@ public static class DataAccessLayerServiceRegistration
         services.AddScoped<ISocialRepository, SocialRepository>();
         services.AddScoped<IWebInfoRepository, WebInfoRepository>();
         services.AddScoped<IWebLogoRepository, WebLogoRepository>();
-
+        services.AddScoped<IWishListRepository, WishListRepository>();
+        services.AddScoped(typeof(IGenericRepositoryForWishlist<>), typeof(GenericReprositoryForWishlist<>));
 
 
 

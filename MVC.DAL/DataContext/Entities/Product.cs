@@ -15,7 +15,7 @@ public class Product :TimeStample
     
     public ICollection<ProductImage> ProductImages { get; set; } = [];
 
-
+    public ICollection<WishList> WishLists { get; set; } = [];
 }
 
 public enum ProductOption

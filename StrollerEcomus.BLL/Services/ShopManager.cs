@@ -46,6 +46,8 @@ public class ShopManager:IShopService
             ProductImages= productImages.ToList(),
             IconCategories= iconCategories.ToList(),
             Icons = icons.ToList(),
+            Colors = colors.ToList(),
+            
             
 
         };

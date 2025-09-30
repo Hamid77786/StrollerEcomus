@@ -36,6 +36,7 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<Slider> Sliders { get; set; } = null!;
     public DbSet<Social> Socials { get; set; } = null!;
     public DbSet<WebInfo> WebInfos { get; set; } = null!;
+    public DbSet<WishList> WishLists { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

@@ -40,6 +40,7 @@ public static class BussinessLogicLayerServiceRegistration
         services.AddScoped<ICurrencyService, CurrencyManager>();
         services.AddScoped<ICategoryService, CategoryManager>();
         services.AddScoped<IFrequentlyQuestionService, FrequentlyQuestionManager>();
+        services.AddScoped<IWishListService, WishListManager>();
 
         return services;
     }
